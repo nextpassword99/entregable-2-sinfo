@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entregable 1</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Macondo&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <section id="inicio">
+        <div class="container">
+          <form id="form" onsubmit="getForm()">
+            <div class="header_form">
+              <h1 class="effect_writer">Formulario de registro</h1>
+              <p>Este es un formulario completo</p>
+            </div>
+            <div class="body_form">
+              <div class="flex-1">
+                <div class="flex column">
+                  <div class="container_input_text">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder=""
+                      maxlength="50"
+                      required
+                    />
+                    <span></span>
+                    <label for="name">Nombres</label>
+                  </div>
+                  <div class="container_input_text">
+                    <input
+                      type="text"
+                      name="first-name"
+                      id="first-name"
+                      placeholder=""
+                      maxlength="50"
+                      required
+                    />
+                    <span></span>
+                    <label for="first-name">Apellidos</label>
+                  </div>
+                  <div class="container_input_text">
+                    <input
+                      type="email"
+                      name="correo"
+                      id="correo"
+                      placeholder=""
+                      required
+                    />
+                    <span style="width: 43px"></span>
+                    <label for="correo">Correo</label>
+                  </div>
+
+                  <label for="population">Población</label>
+                  <input type="text" id="population" name="population" hidden />
+                  <div class="option_select">
+                    <span class="selection unselectable">Seleccionar</span>
+                    <ul class="population__options hidden-element">
+                      <li class="form__value" data="1000">Alicante</li>
+                      <li class="form__value" data="1500">Madrid</li>
+                      <li class="form__value" data="2000">Sevilla</li>
+                      <li class="form__value" data="3000">Valencia</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-1">
+                <div class="container_radio">
+                  sexo
+                  <label class="radio-label" for="hombre">
+                    <input
+                      type="radio"
+                      id="hombre"
+                      name="sexo"
+                      value="hombre"
+                    />
+                    <span class="radio-custom"></span>
+                    <span>Hombre</span>
+                  </label>
+
+                  <label class="radio-label" for="mujer">
+                    <input type="radio" id="mujer" name="sexo" value="mujer" />
+                    <span class="radio-custom"></span>
+                    <span>Mujer</span>
+                  </label>
+                </div>
+
+                <div class="container_textarea">
+                  <textarea
+                    name="description"
+                    cols="30"
+                    rows="10"
+                    placeholder="Escribe lo que quieras aquí"
+                  ></textarea>
+                  <span class="num_hab"></span>
+                  <br>
+                  <span class="por_hab"></span>
+                </div>
+              </div>
+            </div>
+            <div class="container_checkbox">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="novedades"
+                id="novedades"
+                checked
+              />
+              <label for="novedades">
+                Deseo recibir más información sobre novedades y ofertas.
+              </label>
+            </div>
+
+            <div class="container_checkbox">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="termino"
+                id="termino"
+                required
+              />
+              <label for="termino">
+                Declaro haber leído y aceptar las condiciones generales del
+                programa y la normativa sobre protección de datos.
+              </label>
+            </div>
+            <button type="submit" class="btn">Enviar</button>
+          </form>
+        </div>
+      </section>
+
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Correo</th>
+              <th>Población</th>
+              <th>Sexo</th>
+              <th>Descripción</th>
+              <th>Novedades</th>
+              <th>Términos</th>
+            </tr>
+          </thead>
+          <tbody id="result"></tbody>
+        </table>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
